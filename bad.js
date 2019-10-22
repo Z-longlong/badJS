@@ -146,6 +146,6 @@
       }
   };
   window.badJS({
-      host: 'http://hxtBadjs.com',
+      host: 'http://hxtbadjs.com',
       clienttype: 0,
   });
