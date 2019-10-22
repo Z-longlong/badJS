@@ -145,6 +145,6 @@
           }
       }
   }({
-      host: 'http://39.107.159.239:3001',
+      host: 'http://localhost:3001',
       clienttype: 0,
   });
