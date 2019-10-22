@@ -146,6 +146,6 @@
       }
   };
   window.badJS({
-      host: 'http://localhost:3001',
+      host: 'http://39.107.159.239',
       clienttype: 0,
   });
