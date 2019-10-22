@@ -2,7 +2,7 @@
    * host 上传域名地址
    * clienttype 客户端类型 0 后台系统
    */
-  window.badJS = (function ({
+  window.badJS = function ({
       host,
       clienttype
   }) {
@@ -144,7 +144,8 @@
               return true;
           }
       }
-  })({
+  };
+  window.badJS({
       host: 'http://localhost:3001',
       clienttype: 0,
   });
