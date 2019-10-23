@@ -1,8 +1,11 @@
 /**
-   * host 上传域名地址
-   * clienttype 客户端类型 0 后台系统
-   */
-window.badJS = function({ host, clienttype }) {
+ * host 上传域名地址
+ * clienttype 客户端类型 0 后台系统
+ */
+window.badJS = function ({
+	host,
+	clienttype
+}) {
 	const PARAMS_MAX_LENGTH = {
 		IE: 2083,
 		Firefox: 65536,
@@ -10,11 +13,11 @@ window.badJS = function({ host, clienttype }) {
 		chrome: 8182
 	};
 	// type 1 vue error  2 promise error 3 static error  4 jserror
-	window.onload = function() {
+	window.onload = function () {
 		let vue = window.globalVue;
 		if (vue) {
 			// vue error
-			vue.constructor.config.errorHandler = function(error, vm, info) {
+			vue.constructor.config.errorHandler = function (error, vm, info) {
 				let str =
 					'errorType=' +
 					error.name +
@@ -43,15 +46,15 @@ window.badJS = function({ host, clienttype }) {
 		(err) => {
 			err.preventDefault();
 			let str =
-				'errorType=Promise error' + '&msg=' + err.reason
-					? err.reason
-					: '未传入错误信息' +
-						'&from=' +
-						encodeURIComponent(location.href) +
-						'&type=2&clienttype=' +
-						clienttype +
-						'&errorTime=' +
-						new Date().getTime();
+				'errorType=Promise error' + '&msg=' + err.reason ?
+				err.reason :
+				'未传入错误信息' +
+				'&from=' +
+				encodeURIComponent(location.href) +
+				'&type=2&clienttype=' +
+				clienttype +
+				'&errorTime=' +
+				new Date().getTime();
 			if (!strlen(str)) {
 				throw new Error('Exceeded the browser limit parameter length');
 			}
@@ -60,9 +63,9 @@ window.badJS = function({ host, clienttype }) {
 		false
 	);
 	// 监听js 错误
-	window.onerror = function(msg, url, line, col, error) {
+	window.onerror = function (msg, url, line, col, error) {
 		// 异步防止阻塞
-		setTimeout(function() {
+		setTimeout(function () {
 			let defaults = {};
 			col = col || (window.event && window.event.errorCharacter) || 0;
 			defaults.filePath = url;
@@ -118,7 +121,7 @@ window.badJS = function({ host, clienttype }) {
 	// 监听静态资源错误
 	window.addEventListener(
 		'error',
-		function(e) {
+		function (e) {
 			// 获取出错对象属性
 			let typeName = e.target.localName;
 			// 区分js error 和静态资源error
@@ -181,6 +184,6 @@ window.badJS = function({ host, clienttype }) {
 	}
 };
 window.badJS({
-	host: 'http://hxtbadjs.com',
+	host: 'http://192.168.80.10:3001',
 	clienttype: 0
 });
