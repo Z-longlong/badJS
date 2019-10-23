@@ -28,7 +28,7 @@ window.badJS = function ({
 					// encodeURIComponent 防止被截断 URL中含有# 后面会被截断
 					'&from=' +
 					encodeURIComponent(location.href) +
-					"&type='1'&clienttype=" +
+					"&type=1&clienttype=" +
 					clienttype +
 					'&errorTime=' +
 					new Date().getTime();
