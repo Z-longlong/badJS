@@ -145,6 +145,7 @@
           }
       }
   };
+  console.log('11');
   window.badJS({
       host: 'http://hxtbadjs.com',
       clienttype: 0,
