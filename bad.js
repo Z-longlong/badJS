@@ -184,6 +184,7 @@ window.badJS = function ({
 	}
 };
 window.badJS({
-	host: 'http://192.168.80.10:3001',
+	// host: 'http://192.168.80.10:3001',//线上地址
+	host: 'http://localhost:3001', // 线下地址
 	clienttype: 0
 });
