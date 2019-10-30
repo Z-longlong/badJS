@@ -1,0 +1,22 @@
+{
+  "name": "badjs",
+  "version": "1.0.0",
+  "description": "#### Description 捕获前端执行错误，并上报",
+  "main": "bad.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/gent_zhou/badJS.git"
+  },
+  "author": "zyl",
+  "license": "ISC",
+  "devDependencies": {
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-terser": "^5.1.2",
+    "rollup-plugin-uglify": "^6.0.3"
+  }
+}
